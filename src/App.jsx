@@ -32,7 +32,7 @@ function App() {
       {isGameComplete && <VictoryMessage moves={moves} />}
       <div className="cards-grid">
         {cards.map((card) => (
-          <Card card={card} onClick={handleCardClick} />
+          <Card key={card.id} card={card} onClick={handleCardClick} />
         ))}
       </div>
     </div>
